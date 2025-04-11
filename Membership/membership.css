@@ -1,0 +1,560 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+.navbar {
+    font-size: 1em;
+    background-color: #1e1e1e; 
+    padding: 15px 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0; 
+    flex-grow: 1;
+    justify-content: center; 
+}
+
+.logo {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-right: 20px;
+    color: #eee; 
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-right: 15px;
+    position: relative;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links li > a {
+    text-decoration: none;
+    color: #ccc; 
+    font-size: 0.95em; 
+    display: block;
+    padding: 10px 15px; 
+    position: relative;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-links li > a::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #eee; 
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav-links li > a:hover {
+    color: #eee;
+}
+
+.nav-links li > a:hover::after {
+    transform: scaleX(1);
+}
+
+
+.nav-links li:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+  }
+.dropdown-content {
+    display: block; 
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #2c2c2c;
+    padding: 10px 0;
+    border-radius: 4px;
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    transition: opacity 0.3s ease-in-out;
+    padding-top: 10px; 
+  }
+
+.nav-links li:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 8px 15px;
+    display: block;
+    text-decoration: none;
+    color: #ddd;
+    font-size: 0.95em;
+    transition: background-color 0.3s ease, color 0.2s ease;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #3a3a3a;
+    color: #eee;
+  }
+  .submenu {
+    display: none;
+    position: absolute;
+    left: 100%; 
+    top: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 0;
+    min-width: 150px; 
+    z-index: 11;
+}
+
+.dropdown li:hover .submenu {
+    display: block;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block; 
+    position: relative;
+}
+
+nav > ul > li {
+    display: inline-block; 
+}
+
+nav > ul > li > a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.navbar-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start; 
+    margin-bottom: 0;
+    margin-left: 600px;
+}
+
+search-bar {
+    background-color: #333;
+    border-radius: 20px;
+    padding: 6px 15px; 
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+    border: none;
+}
+
+.search-bar input[type="text"] {
+    border: 2px solid;
+    background-color: transparent;
+    padding: 8px; 
+    flex-grow: 1;
+    font-size: 0.9em;
+    outline: none;
+    color: #ccc;
+    border-left: none;
+    border-right: none;
+    border-top: white;
+    
+}
+
+.search-bar button {
+    border: none;
+    background-color: transparent;
+    padding: 8px 0 8px 15px; 
+    cursor: pointer;
+    outline: none;
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+.search-bar button::before {
+    content: 'Search';
+}
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 0.95em;
+    margin-left: 15px;
+    padding: 10px 0;
+    position: relative;
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar-right a::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #eee;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.navbar-right a:hover {
+    color: #eee;
+}
+
+.navbar-right a:hover::after {
+    transform: scaleX(1);
+}
+navbar-right i { 
+    color: #888; 
+    font-size: 1.2em; 
+    margin-left: 15px; 
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+
+
+.navbar-right i:first-child {
+    margin-left: 0;
+}
+.signup-button {
+    background-color: transparent;
+    color:white;
+   
+    padding: 8px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    margin-left: 15px; 
+}
+.account-icon,
+.cart-icon {
+    color: #ccc;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.account-icon:hover,
+.cart-icon:hover {
+    color: #eee;
+}
+
+
+.membership-page {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.1em;
+    color: #777;
+    line-height: 1.6;
+}
+
+.benefits {
+    margin-bottom: 30px;
+}
+
+.benefits h2 {
+    font-size: 1.8em;
+    color: #555;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+.benefit-list {
+    list-style: none;
+    padding: 0;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.benefit-item i {
+    font-size: 1.5em;
+    color: black; 
+    margin-right: 15px;
+}
+
+.benefit-item span {
+    font-size: 1.1em;
+}
+
+.plans {
+    margin-bottom: 30px;
+}
+
+.plans h2 {
+    font-size: 1.8em;
+    color: #555;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+.plan-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    flex: 1 0 250px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.plan-card h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.plan-card .price {
+    font-size: 2em;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.plan-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.plan-card li {
+    margin-bottom: 8px;
+    font-size: 0.95em;
+    color: #666;
+}
+
+.plan-card .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.plan-card .button:hover {
+    background-color: #808080;
+}
+
+.faq {
+    margin-bottom: 30px;
+}
+
+.faq h2 {
+    font-size: 1.8em;
+    color: #555;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-item h4 {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.faq-item p {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.6;
+    display: none; 
+}
+
+.faq-item.active p {
+    display: block;
+}
+
+.cta {
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.cta a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #28a745; 
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.cta a:hover {
+    background-color: #1e7e34;
+}
+footer {
+    background-color:white; 
+    color:black;
+    padding: 40px 20px;
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr; 
+    gap: 20px;
+}
+.footer-container > div {
+    margin-bottom: 20px;
+}
+.logo {
+ 
+    font-weight: bold;
+}
+.description {
+    margin-top: 10px;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+.get-started {
+    background-color: #fff;
+    color: #111;
+    padding: 5px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+.app-links a{
+    text-decoration: none;
+    color: black;
+}
+.app-links img {
+    height: 30px;
+    margin-right: 10px;
+}
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-links li {
+    margin-bottom: 5px;
+}
+.footer-links a {
+    color: black;
+    text-decoration: none;
+
+}
+.social-icons a {
+    color:black;
+    
+    margin-right: 10px;
+    text-decoration: none;
+}
+.bottom-bar {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+.bottom-bar a {
+    color: black;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.language-select select {
+    background-color:white;
+    color: black;
+    border: 1px solid #444;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.rating-container {
+    margin-top: 15px;
+    background-color:rgb(0, 0, 0);
+    padding: 8px;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; 
+}
+
+.rating-text,
+.rating-stars,
+.rating-score,
+.trustpilot-logo {
+  
+    font-size: 0.9em;
+    margin-right: 5px;
+}
