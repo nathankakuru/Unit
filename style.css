@@ -145,20 +145,9 @@ body {
     color: #eee;
   }
   
-  .submenu {
-    display: none;
-    position: absolute;
-    left: 100%;
-    top: 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px 0;
-    min-width: 150px;
-    z-index: 11;
-  }
+
   
-  .dropdown li:hover .submenu {
+  .dropdown li:hover  {
     display: block;
   }
   
@@ -182,25 +171,34 @@ body {
     background-color: #f0f0f0;
     border-radius: 5px;
   }
-  
   .navbar-center {
-    flex-grow: 1;
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-bottom: 0;
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 0;
-    margin-left: 600px; 
+    flex-grow: 1; 
+    max-width: 700px; 
   }
-  
   .search-bar {
     background-color: #333;
     border-radius: 20px;
     padding: 6px 15px;
+    margin-left: 67px;
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 700px;
+    max-width: 300px; 
     border: none;
+    transition: transform 0.2s ease-in-out, max-width 0.2s ease-in-out, margin-left 0.2s ease-in-out;
   }
+  
+  .search-bar:active { 
+    transform: scale(0.95); 
+    max-width: 450px;
+    margin-left: 15px;
+  }
+  
   
   .search-bar input[type="text"] {
     border: 2px solid;
@@ -215,19 +213,7 @@ body {
     border-top: white;
   }
   
-  .search-bar button {
-    border: none;
-    background-color: transparent;
-    padding: 8px 0 8px 15px;
-    cursor: pointer;
-    outline: none;
-    color: #aaa;
-    font-size: 0.9em;
-  }
-  
-  .search-bar button::before {
-    content: 'Search';
-  }
+
   
   .navbar-right {
     display: flex;
@@ -276,26 +262,16 @@ body {
     margin-left: 0;
   }
   
-  .signup-button {
-    background-color: transparent;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 25px;
-    text-decoration: none;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-    margin-left: 15px;
-  }
+ 
   
-  .account-icon,
-  .cart-icon {
+  .account-icon {
     color: #ccc;
     margin-left: 15px;
     cursor: pointer;
     transition: color 0.2s ease-in-out;
   }
   
-  .account-icon:hover,
-  .cart-icon:hover {
+  .account-icon:hover {
     color: #eee;
   }
   
