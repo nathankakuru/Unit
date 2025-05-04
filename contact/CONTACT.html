@@ -13,6 +13,11 @@
         <div class="navbar-left-logo">
             <a href="../index.html" class="logo">Paper Print</a>
         </div>
+        <div class="burger-menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         <div class="navbar-center-links">
             <ul class="nav-links">
                 <li class="dropdown">
@@ -88,6 +93,13 @@
           © 2025 Paper Print. All rights reserved.
         </div>
       </footer>
-      
+      <script>
+        function toggleMenu() {
+        const navbarCenterLinks = document.querySelector('.navbar-center-links');
+        const navbarCenter = document.querySelector('.navbar-center');
+        navbarCenterLinks.classList.toggle('open');
+        navbarCenter.classList.toggle('open');
+      }
+    </script>
 </body>
 </html>
