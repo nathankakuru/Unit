@@ -13,6 +13,11 @@
         <div class="navbar-left-logo">
             <a href="../index.html" class="logo">Paper Print</a>
         </div>
+        <div class="burger-menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         <div class="navbar-center-links">
             <ul class="nav-links">
                 <li class="dropdown">
@@ -55,6 +60,9 @@
             We partner with talented independent artists from around the globe, providing them with the tools and reach to share their incredible designs on a diverse range of high-quality products, from apparel and home décor to accessories and beyond. This collaborative ecosystem fuels a constantly evolving collection of unique artwork, ensuring there's something for every style and passion. By utilizing on-demand printing technology, we minimize waste and offer a sustainable way for individuals to access personalized goods. We're committed to fostering a supportive community for artists and delivering exceptional products that allow our customers to showcase their authentic selves.
         </p>
     </div>
+    <a href="../contact/CONTACT.html" class="fixed-contact-button">
+        <i class="fas fa-headphones"></i> Contact Us
+    </a>
     <footer class="footer">
         <div class="footer-content">
           <div class="footer-brand">Paper Print</div>
@@ -69,7 +77,13 @@
           © 2025 Paper Print. All rights reserved.
         </div>
       </footer>
-      
-  
+      <script>
+        function toggleMenu() {
+        const navbarCenterLinks = document.querySelector('.navbar-center-links');
+        const navbarCenter = document.querySelector('.navbar-center');
+        navbarCenterLinks.classList.toggle('open');
+        navbarCenter.classList.toggle('open');
+      }
+    </script>
 </body>
 </html>
