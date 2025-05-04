@@ -15,6 +15,11 @@
         <div class="navbar-left-logo">
             <a href="../index.html" class="logo">Paper Print</a>
         </div>
+        <div class="burger-menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         <div class="navbar-center-links">
             <ul class="nav-links">
                 <li class="dropdown">
@@ -237,7 +242,7 @@
 
     <footer class="footer">
         <div class="footer-content">
-          <div class="footer-brand">W.</div>
+          <div class="footer-brand">Paper Print</div>
           <div class="footer-links">
            
             <a href="../Package/package.html">Packages</a>
@@ -246,11 +251,12 @@
           </div>
         </div>
         <div class="footer-bottom">
-          © 2025 W. All rights reserved.
+          © 2025 Paper Print. All rights reserved.
         </div>
       </footer>
       
     <script>
+        
         function changeSlide(carouselId, direction) {
             const container = document.querySelector(`.carousel-container[data-carousel-id="${carouselId}"]`);
             if (!container) return;
@@ -277,6 +283,13 @@
                 behavior: 'smooth'
             });
         }
+        
+    function toggleMenu() {
+    const navbarCenterLinks = document.querySelector('.navbar-center-links');
+    const navbarCenter = document.querySelector('.navbar-center');
+    navbarCenterLinks.classList.toggle('open');
+    navbarCenter.classList.toggle('open');
+  }
     </script>
 
 </body>
