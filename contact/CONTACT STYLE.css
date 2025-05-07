@@ -328,7 +328,7 @@ textarea {
     margin-right: 5px;
 }
 
-button[type="submit"] {
+button {
     background-color: #222;
     color: white;
     padding: 12px 25px;
@@ -339,7 +339,7 @@ button[type="submit"] {
     transition: background-color 0.3s ease;
 }
 
-button[type="submit"]:hover {
+button:hover {
     background-color: #555;
 }
 
