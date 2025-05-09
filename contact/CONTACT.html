@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="stylesheet" href="CONTACT STYLE.css">
     <title>Contact Us</title>
-   
+
 </head>
 <body>
     <nav class="navbar">
@@ -17,39 +17,39 @@
             <span></span>
             <span></span>
             <span></span>
-          </div>
+         </div>
         <div class="navbar-center-links">
             <ul class="nav-links">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle">Products</a>
                     <div class="dropdown-content">
                         <a href="../mugs/mugs.html">Mugs</a>
-                       
+                        
                         <a href="../T-shirt/t-shirt.html">T-Shirts</a>
                         <a href="../bottles/bottles.html">Bottles</a>
                          </div>
-                         </li>
-               
-                         <li>
-                            <a href="../Package/package.html" class="dropdown-toggle"> Packages </a>
-                            
-                        </li>
-              
-               
+                     </li>
+                    
+                     <li>
+                         <a href="../Package/package.html" class="dropdown-toggle"> Packages </a>
+                        
+                     </li>
+                
+                
             </ul>
         </div>
 
- 
-       
-        </div>
-       
+    
+    
+    </div>
+    
     </nav>
     <div class="container">
         <div class="contact-info">
             <h1>CONTACT US</h1>
-                   </div>
+                    </div>
         <div class="contact-form">
-            <form action="#" method="post">
+            <form id="myForm" action="#" method="post">
                 <div class="form-group">
                     <label for="name">NAME *</label>
                     <input type="text" id="name" name="name" required>
@@ -61,14 +61,14 @@
                 
                 <div class="form-group">
                     <label for="subject">WHAT'S THIS ABOUT? *</label>
-                   
+                    
                 </div>
                 <div class="form-group">
                     <label for="comment">COMMENT *</label>
                     <textarea id="comment" name="comment" rows="5" required></textarea>
                 </div>
                 
-                <button>SEND MESSAGE</button>
+                <button type="submit">SEND MESSAGE</button>
             </form>
             <p class="form-footer">This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.</p>
         </div>
@@ -90,11 +90,16 @@
       </footer>
       <script>
         function toggleMenu() {
-        const navbarCenterLinks = document.querySelector('.navbar-center-links');
-        const navbarCenter = document.querySelector('.navbar-center');
-        navbarCenterLinks.classList.toggle('open');
-        navbarCenter.classList.toggle('open');
-      }
+          const navbarCenterLinks = document.querySelector('.navbar-center-links');
+          const navbarCenter = document.querySelector('.navbar-center');
+          navbarCenterLinks.classList.toggle('open');
+          navbarCenter.classList.toggle('open');
+        }
+
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // This line stops the form from submitting
+          alert(' form  submitted!'); // Optional:  Show a message
+        });
     </script>
 </body>
 </html>
