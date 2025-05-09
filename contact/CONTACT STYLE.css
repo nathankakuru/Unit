@@ -311,22 +311,6 @@ textarea {
 }
 
 
-.checkbox-group {
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-
-.checkbox-group label {
-    display: inline-flex;
-    align-items: center;
-    font-size: 0.8em;
-    color: #777;
-    cursor: pointer;
-}
-
-.checkbox-group input[type="checkbox"] {
-    margin-right: 5px;
-}
 
 button {
     background-color: #222;
