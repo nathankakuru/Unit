@@ -248,6 +248,35 @@
     }
   }
   
+.about-hero {
+  background-color:white; /* light blue */
+  padding: 60px 20px;
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-content h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+  color: #111;
+  flex: 1 1 300px;
+}
+
+.about-content img {
+  max-width: 100%;
+  width: 500px;
+  height: auto;
+  border-radius: 8px;
+  flex: 1 1 300px;
+}
 
 .container {
     max-width: 1200px;
@@ -294,50 +323,51 @@
 .fixed-contact-button:hover {
     background-color: #444;
 }
+
 .footer {
-    background-color: #1e1e1e;
-    color: #ffffff;
-    padding: 30px 20px;
-    font-family: Arial, sans-serif;
-    border-top: 1px solid #333;
+  background-color: white;
+  color: black;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 15px;
+.footer-logo {
+color: black;
+  font-size: 19px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.footer-brand {
-    font-size: 24px;
-    font-weight: bold;
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-info div {
+  font-weight: 500;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid black;
+  margin: 20px auto;
+  width: 90%;
 }
 
 .footer-links {
-    justify-content: center;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    gap:   20px;
-    flex-wrap: wrap;
-    margin-right: 712px;
+  margin-top: 10px;
 }
 
 .footer-links a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s;
+  color: black;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .footer-links a:hover {
-    color: #cccccc;
-}
-
-.footer-bottom {
-    text-align: center;
-    font-size: 14px;
-    border-top: 1px solid #333;
-    padding-top: 10px;
+  text-decoration: underline;
 }
