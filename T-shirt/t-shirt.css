@@ -266,11 +266,6 @@ nav > ul > li > a {
     margin-bottom: 8px;
 }
 
-.best-sellers-header p {
-    font-size: 1.1em;
-    color: #666;
-}
-
 
 .best-sellers-grid {
     display: grid;
@@ -302,35 +297,14 @@ nav > ul > li > a {
     border-radius: 5%;
 }
 
-.best-seller-item h3,
-.best-seller-item p {
+.best-seller-item h3{
     font-size: 0.9em;
-    margin-bottom: 5px;
+    margin-bottom: 30px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.best-seller-item .price {
-    font-weight: bold;
-    color: #333;
-}
-.best-seller-item .price-container {
-    margin-top: auto;
-}
-
-.best-seller-item .price {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #333;
-}
-
-.best-seller-item .original-price {
-    font-size: 1em;
-    text-decoration: line-through;
-    color: #999;
-    margin-left: 5px;
-}
 .best-seller-item:hover{
     transform: translateY(-5px);
 
@@ -377,50 +351,51 @@ nav > ul > li > a {
 .fixed-contact-button:hover {
     background-color: #444;
 }
+
 .footer {
-    background-color: #1e1e1e;
-    color: #ffffff;
-    padding: 30px 20px;
-    font-family: Arial, sans-serif;
-    border-top: 1px solid #333;
+  background-color: white;
+  color: black;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 15px;
+.footer-logo {
+color: black;
+  font-size: 19px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.footer-brand {
-    font-size: 24px;
-    font-weight: bold;
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-info div {
+  font-weight: 500;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid black;
+  margin: 20px auto;
+  width: 90%;
 }
 
 .footer-links {
-    justify-content: center;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    gap:  20px;
-    flex-wrap: wrap;
-    margin-right: 712px;
+  margin-top: 10px;
 }
 
 .footer-links a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s;
+  color: black;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .footer-links a:hover {
-    color: #cccccc;
-}
-
-.footer-bottom {
-    text-align: center;
-    font-size: 14px;
-    border-top: 1px solid #333;
-    padding-top: 10px;
+  text-decoration: underline;
 }
